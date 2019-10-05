@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   // selector with htmltag
@@ -18,7 +18,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created!';
   serverName = '';
   serverCreated = false;
-  servers = ['Testserver', 'Testserver 2'];
+  @Input() servers;
 
   constructor() {
     setTimeout(()=>{
